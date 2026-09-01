@@ -18,6 +18,8 @@ import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 
+import { createJobApplication } from "@/lib/actions/job-applications";
+
 interface CreateJobApplicationDialogProps {
 	columnId: string;
 	boardId: string;
@@ -39,19 +41,35 @@ export default function CreateJobApplicationDialog({
 	boardId,
 }: CreateJobApplicationDialogProps) {
 	const [formData, setFormData] = useState(INITIAL_FORM_DATA);
+	const [isOpen, setIsOpen] = useState(false);
 
 	async function handleSubmit(e: React.FormEvent) {
 		e.preventDefault();
 
 		try {
-			
+			const result = await createJobApplication({
+				...formData,
+				columnId,
+				boardId,
+				tags: formData.tags
+					.split(",")
+					.map((tag) => tag.trim())
+					.filter((tag) => tag.length > 0),
+			});
+
+			if (!result.error) {
+				setFormData(INITIAL_FORM_DATA);
+				setIsOpen(false);
+			} else {
+				console.error("Failed to create job application: ", result.error);
+			}
 		} catch (error) {
 			console.error(error);
 		}
 	}
 
 	return (
-		<Dialog>
+		<Dialog open={isOpen} onOpenChange={setIsOpen}>
 			<DialogTrigger
 				render={
 					<Button
