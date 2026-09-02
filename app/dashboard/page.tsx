@@ -20,6 +20,9 @@ export default async function Dashboard() {
 		name: "Job Hunt",
 	}).populate({
 		path: "columns",
+		populate: {
+			path: "jobApplications",
+		}
 	});
 
 	const board = doc.toObject({
