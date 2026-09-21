@@ -11,7 +11,7 @@ export default function ImageTabs() {
 	const [activeTab, setActiveTab] = useState<TabTypes>("organize");
 
 	return (
-		<section className="border-t bg-white py-16">
+		<section className="border-t bg-background py-16">
 			<div className="container mx-auto px-4">
 				<div className="mx-auto max-w-6xl">
 					{/* Tabs */}

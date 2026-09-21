@@ -6,7 +6,7 @@ import ImageTabs from "@/components/image-tabs";
 
 export default function Home() {
 	return (
-		<div className="flex min-h-screen flex-col bg-white">
+		<div className="flex min-h-screen flex-col bg-background">
 			<main className="flex-1">
 				{/* Hero Section */}
 				<section className="container mx-auto px-4 py-32">
@@ -34,7 +34,7 @@ export default function Home() {
 				<ImageTabs />
 
 				{/* Features Section */}
-				<section className="border-t bg-white py-24">
+				<section className="border-t py-24">
 					<div className="container mx-auto px-4">
 						<div className="grid gap-12 md:grid-cols-3">
 							<div className="flex flex-col">
