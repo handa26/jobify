@@ -321,7 +321,7 @@ export default function KanbanBoard({ board, userId }: KanbanBoardProps) {
 			onDragEnd={handleDragEnd}
 		>
 			<div className="space-y-4">
-				<div className="flex gap-4 overflow-x-auto pb-4">
+				<div className="flex gap-4 overflow-x-auto pb-4 px-4">
 					{sortedColumns.map((col, key) => {
 						const config = COLUMN_CONFIG[key] || {
 							color: "bg-cyan-500",
