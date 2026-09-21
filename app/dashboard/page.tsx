@@ -1,11 +1,12 @@
 import { redirect } from "next/navigation";
+import { Suspense } from "react";
 
 import KanbanBoard from "@/components/kanban-board";
+import Loading from "@/components/loading";
 
 import connectDB from "@/lib/db";
 import { Board } from "@/lib/models";
 import { getSession } from "@/lib/auth/auth";
-import { Suspense } from "react";
 
 async function getBoard(userId: string) {
 	"use cache";
@@ -54,7 +55,7 @@ async function DashboardPage() {
 
 export default async function Dashboard() {
 	return (
-		<Suspense fallback={<p>Loading...</p>}>
+		<Suspense fallback={<Loading />}>
 			<DashboardPage />
 		</Suspense>
 	);
