@@ -189,7 +189,7 @@ export default function CreateJobApplicationDialog({
 
 					<DialogFooter>
 						<DialogClose render={<Button variant="outline">Cancel</Button>} />
-						<Button type="submit">Add Application</Button>
+						<Button type="submit" className="dark:text-foreground">Add Application</Button>
 					</DialogFooter>
 				</form>
 			</DialogContent>

@@ -19,21 +19,21 @@ export default function ImageTabs() {
 						<Button
 							onClick={() => setActiveTab("organize")}
 							variant={activeTab === "organize" ? "default" : "ghost"}
-							className={`rounded-lg px-6 py-3 text-sm font-medium`}
+							className={`rounded-lg px-6 py-3 text-sm font-medium dark:text-white`}
 						>
 							Organize Applications
 						</Button>
 						<Button
 							onClick={() => setActiveTab("hired")}
 							variant={activeTab === "hired" ? "default" : "ghost"}
-							className={`rounded-lg px-6 py-3 text-sm font-medium`}
+							className={`rounded-lg px-6 py-3 text-sm font-medium dark:text-white`}
 						>
 							Get Hired
 						</Button>
 						<Button
 							onClick={() => setActiveTab("boards")}
 							variant={activeTab === "boards" ? "default" : "ghost"}
-							className={`rounded-lg px-6 py-3 text-sm font-medium`}
+							className={`rounded-lg px-6 py-3 text-sm font-medium dark:text-white`}
 						>
 							Manage Boards
 						</Button>

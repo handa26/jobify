@@ -43,8 +43,8 @@ async function DashboardPage() {
 		<div className="min-h-screen bg-background">
 			<div className="container mx-auto p-6">
 				<div className="mb-6">
-					<h1 className="text-3xl font-bold text-black">{board.name}</h1>
-					<p className="text-gray-600">Track your job applications</p>
+					<h1 className="text-3xl font-bold text-black dark:text-foreground">{board.name}</h1>
+					<p className="text-gray-600 dark:text-muted-foreground">Track your job applications</p>
 				</div>
 
 				<KanbanBoard board={board} userId={session.user.id} />

@@ -98,7 +98,7 @@ function DroppableColumn({
 		column.jobApplications?.sort((a, b) => a.order - b.order) || [];
 
 	return (
-		<Card className="min-w-75 shrink-0 shadow-md p-0">
+		<Card className="min-w-75 shrink-0 shadow-md p-0 dark:bg-secondary">
 			<CardHeader
 				className={`${config.color} text-white rounded-t-lg pb-3 pt-3`}
 			>
@@ -132,7 +132,7 @@ function DroppableColumn({
 
 			<CardContent
 				ref={setNodeRef}
-				className={`space-y-2 pt-4 bg-gray-50/50 min-h-100 rounded-b-lg ${isOver ? "ring-2 ring-blue-500" : ""}`}
+				className={`space-y-2 pt-4 bg-gray-50/50 dark:bg-secondary min-h-100 rounded-b-lg ${isOver ? "ring-2 ring-blue-500" : ""}`}
 			>
 				<SortableContext
 					items={sortedJobs.map((job) => job._id)}
