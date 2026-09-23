@@ -35,14 +35,14 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
 			className={`${manrope.variable} h-full antialiased`}
 			suppressHydrationWarning
 		>
-			<body className="min-h-full flex flex-col">
+			<body>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="dark"
 					enableSystem
 					disableTransitionOnChange
 				>
-				<Navbar />
+				{/* <Navbar /> */}
 					{children}
 				</ThemeProvider>
 			</body>

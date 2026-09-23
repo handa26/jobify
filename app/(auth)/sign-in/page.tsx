@@ -54,13 +54,13 @@ export default function SignIn() {
 	}
 
 	return (
-		<div className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-white p-4">
+		<div className="flex min-h-screen items-center justify-center bg-white p-4">
 			<Card className="w-full max-w-md border-gray-200 shadow-lg">
 				<CardHeader className="space-y-1">
 					<CardTitle className="text-2xl font-bold text-black dark:text-foreground">
 						Sign In
 					</CardTitle>
-					<CardDescription className="text-gray-600">
+					<CardDescription className="text-gray-600 dark:text-muted-foreground">
 						Enter your credentials to access your account.
 					</CardDescription>
 				</CardHeader>
@@ -73,7 +73,7 @@ export default function SignIn() {
 						)}
 
 						<div className="space-y-2">
-							<Label htmlFor="email" className="text-gray-700">
+							<Label htmlFor="email" className="text-gray-700 dark:text-muted-foreground">
 								Email
 							</Label>
 							<Input
@@ -88,7 +88,7 @@ export default function SignIn() {
 						</div>
 
 						<div className="space-y-2">
-							<Label htmlFor="password" className="text-gray-700">
+							<Label htmlFor="password" className="text-gray-700 dark:text-muted-foreground">
 								Password
 							</Label>
 							<Input
@@ -106,12 +106,12 @@ export default function SignIn() {
 					<CardFooter className="flex flex-col space-y-4">
 						<Button
 							type="submit"
-							className="w-full bg-primary hover:bg-primary/90"
+							className="w-full bg-primary hover:bg-primary/90 dark:text-foreground"
 							disabled={loading}
 						>
 							{loading ? "Logging in..." : "Sign In"}
 						</Button>
-						<p className="text-center text-sm text-gray-600">
+						<p className="text-center text-sm text-gray-600 dark:text-muted-foreground">
 							Don't have an account?{" "}
 							<Link
 								href="/sign-up"

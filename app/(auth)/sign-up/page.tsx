@@ -56,13 +56,13 @@ export default function SignUp() {
 	}
 
 	return (
-		<div className="flex min-h-[calc(100vh-4rem)] items-center justify-center bg-white p-4">
+		<div className="flex min-h-screen items-center justify-center bg-white p-4">
 			<Card className="w-full max-w-md border-gray-200 shadow-lg">
 				<CardHeader className="space-y-1">
-					<CardTitle className="text-2xl font-bold text-black">
+					<CardTitle className="text-2xl font-bold text-black dark:text-foreground">
 						Sign Up
 					</CardTitle>
-					<CardDescription className="text-gray-600">
+					<CardDescription className="text-gray-600 dark:text-muted-foreground">
 						Create an account to start tracking your job applications.
 					</CardDescription>
 				</CardHeader>
@@ -75,7 +75,7 @@ export default function SignUp() {
 						)}
 
 						<div className="space-y-2">
-							<Label htmlFor="name" className="text-gray-700">
+							<Label htmlFor="name" className="text-gray-700 dark:text-muted-foreground">
 								Name
 							</Label>
 							<Input
@@ -90,7 +90,7 @@ export default function SignUp() {
 						</div>
 
 						<div className="space-y-2">
-							<Label htmlFor="email" className="text-gray-700">
+							<Label htmlFor="email" className="text-gray-700 dark:text-muted-foreground">
 								Email
 							</Label>
 							<Input
@@ -105,7 +105,7 @@ export default function SignUp() {
 						</div>
 
 						<div className="space-y-2">
-							<Label htmlFor="password" className="text-gray-700">
+							<Label htmlFor="password" className="text-gray-700 dark:text-muted-foreground">
 								Password
 							</Label>
 							<Input
@@ -123,12 +123,12 @@ export default function SignUp() {
 					<CardFooter className="flex flex-col space-y-4">
 						<Button
 							type="submit"
-							className="w-full bg-primary hover:bg-primary/90"
+							className="w-full bg-primary hover:bg-primary/90 dark:text-foreground"
 							disabled={loading}
 						>
 							{loading ? "Creating account..." : "Sign Up"}
 						</Button>
-						<p className="text-center text-sm text-gray-600">
+						<p className="text-center text-sm text-gray-600 dark:text-muted-foreground">
 							Already have an account?{" "}
 							<Link
 								href="/sign-in"

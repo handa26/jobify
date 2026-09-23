@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { ArrowRight, Briefcase, CheckCircle2, TrendingUp } from "lucide-react";
+import Link from 'next/link';
+import { ArrowRight, Briefcase, CheckCircle2, TrendingUp } from 'lucide-react';
 
-import { Button } from "@/components/ui/button";
-import ImageTabs from "@/components/image-tabs";
+import { Button } from '@/components/ui/button';
+import ImageTabs from '@/components/image-tabs';
 
 export default function Home() {
 	return (
@@ -19,7 +19,10 @@ export default function Home() {
 						</p>
 						<div className="flex flex-col items-center gap-4">
 							<Link href="/sign-up">
-								<Button size="lg" className="h-12 px-8 text-lg font-medium dark:text-white">
+								<Button
+									size="lg"
+									className="h-12 px-8 text-lg font-medium dark:text-white"
+								>
 									Start for free <ArrowRight className="ml-2" />
 								</Button>
 							</Link>
