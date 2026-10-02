@@ -1,20 +1,8 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Manrope } from 'next/font/google';
+import { Manrope } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 
-import Navbar from '@/components/navbar';
-
 import './globals.css';
-
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -42,7 +30,6 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
 					enableSystem
 					disableTransitionOnChange
 				>
-				{/* <Navbar /> */}
 					{children}
 				</ThemeProvider>
 			</body>
