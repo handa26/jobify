@@ -8,9 +8,9 @@ A modern web application built with Next.js designed to managing and tracking jo
 
 ## 📸 Preview
 
-![Example 1](public/hero-images/hero1.png)
-![Example 2](public/hero-images/hero2.png)
-![Example 3](public/hero-images/hero3.png)
+![Example 1](public/hero1.png)
+![Example 2](public/hero2.png)
+![Example 3](public/hero3.png)
 
 ---
 
